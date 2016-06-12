@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BGW-lm-yHb">
+    <dependencies>
+        <deployment version="1792" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="w2Q-dm-t29">
+            <objects>
+                <navigationController id="BGW-lm-yHb" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fEi-q7-jUV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="gUg-qO-gsg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6CX-E3-aeT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2922" y="179"/>
+        </scene>
+        <!--iOS系统字体Demo(长按复制)-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="36" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7sy-Xv-TPr">
+                                <rect key="frame" x="20" y="20" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="ofw-n3-ltt"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="cBy-zi-m9E"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7sy-Xv-TPr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="0S7-0b-F1U"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7sy-Xv-TPr" secondAttribute="trailing" constant="-20" id="QVu-fr-c8s"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7sy-Xv-TPr" secondAttribute="bottom" id="ion-od-EoM"/>
+                            <constraint firstItem="7sy-Xv-TPr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="yaA-lf-mOc"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="7sy-Xv-TPr"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="ion-od-EoM"/>
+                                <exclude reference="0S7-0b-F1U"/>
+                                <exclude reference="QVu-fr-c8s"/>
+                                <exclude reference="yaA-lf-mOc"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="subviews">
+                                <include reference="7sy-Xv-TPr"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="ion-od-EoM"/>
+                                <include reference="0S7-0b-F1U"/>
+                                <include reference="QVu-fr-c8s"/>
+                                <include reference="yaA-lf-mOc"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="iOS系统字体Demo(长按复制)" id="gGZ-5r-Abh"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="myTableview" destination="7sy-Xv-TPr" id="Ckm-Rn-Mbs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2517" y="189"/>
+        </scene>
+    </scenes>
+</document>
